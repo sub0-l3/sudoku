@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js"></script>
+    <title>Sudoku</title>
+</head>
+
+<body onload="init()">
+    <div class="container">
+        <div class="row">
+            <div class="cell"><input type="text" class="cell__input" data-cell-id="00"></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id="01"></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id="02"></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id="03"></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id="04"></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id="05"></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id="06"></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id="07"></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id="08"></div>
+        </div>
+        <div class="row">
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+        </div>
+        <div class="row">
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+        </div>
+        <div class="row">
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+        </div>
+        <div class="row">
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+        </div>
+        <div class="row">
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+        </div>
+        <div class="row">
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+        </div>
+        <div class="row">
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+        </div>
+        <div class="row">
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+            <div class="cell"><input type="text" class="cell__input" data-cell-id=""></div>
+        </div>
+    </div>
+</body>
+
+</html>
